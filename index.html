@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+
+      <!-- Credit card -->
+      <div class="half cards">
+        <!-- Front of the card -->
+        <div class="front-card card">
+          <img src="images/bg-card-front.png" alt="front-card.png" />
+          <div class="card-text-area">
+            <img class="logo" src="images/card-logo.svg" alt="card-logo.png" />
+            <p class="text-dec card-number" data-default="0000 0000 0000 0000">
+              0000 0000 0000 0000
+            </p>
+            <p class="text-dec card-name" data-default="Jane Appleseed">
+              Jane Appleseed
+            </p>
+            <p class="text-dec card-date">
+              <span class="mounth" data-default="00">00</span>/<span class="year" data-default="00">00</span>
+            </p>
+          </div>
+        </div>
+        <!-- Back of the card-->
+        <div class="back-card card">
+          <img src="images/bg-card-back.png" alt="back-card.png" />
+          <p class="text-dec cvc-card" data-default="000">000</p>
+        </div>
+      </div>
+
+      <!-- Text area  -->
+      <div class="half texts">
+        <!-- FORM -->
+        <form action="" method="get" class="form-credit-card half-right-part">
+          <!-- Name of the person -->
+          <div class="cardholder-name">
+            <label for="name">CARDHOLDER NAME</label><br />
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="name"
+              maxlength="30"
+              placeholder="e.g. Jane Appleseed"
+              required
+              data-message=""
+              data-for="name"
+            />
+          </div>
+          <p class="error-message" data-for="name"></p>
+          <!-- Number of the card -->
+          <div class="card-number-text">
+            <label for="card-number-text">CARD NUMBER</label><br />
+            <input
+              class="input"
+              type="tel"
+              maxlength="19"
+              name="card-number-text"
+              id="card-number-text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+              data-message="Wrong format, numbers only"
+              data-for="card-number-text"
+            />
+            <p class="error-message" data-for="card-number-text"></p>
+          </div>
+          <!-- Date and CVC -->
+          <div class="date-and-cvc">
+            <div class="date">
+              <label for="date">Exp. Date (MM/YY)</label><br />
+              <input
+                class="input"
+                type="tel"
+                maxlength="2"
+                name="date"
+                id="mm"
+                placeholder="MM"
+                required
+                data-message="Can't be blank"
+                data-for="mm"
+              />
+              <p class="error-message" data-for="mm"></p>
+              <input
+                class="input"
+                type="tel"
+                maxlength="2"
+                name="date"
+                id="yy"
+                placeholder="YY"
+                required
+                data-message="Can't be blank"
+                data-for="yy"
+              />
+              <p class="error-message" data-for="yy"></p>
+            </div>
+            <div class="cvc">
+              <label for="cvc"> CVC</label><br />
+              <input
+                class="input"
+                type="tel"
+                maxlength="3"
+                name="cvc"
+                id="cvc"
+                placeholder="e.g. 123"
+                required
+                data-message="Can't be blank"
+                data-for="cvc"
+              />
+              <p class="error-message" data-for="cvc"></p>
+            </div>
+          </div>
+          <!-- Confirm Button -->
+          <input type="submit" id="confirm" value="Confirm" class="btn" />
+        </form>
+
+        <!-- Complete state -->
+        <div class="complete-state half-right-part invisible">
+          <img src="images/icon-complete.svg" alt="icon-complete" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="btn continue-btn">Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by
+        <a href="https://www.frontendmentor.io/profile/Tiuty00">Tommaso Caravaggi</a>.
+      </div>
+    </footer>
+
+    <!-- Javascript file -->
+    <script src="js/index.js"></script>
+
+  </body>
+</html>
