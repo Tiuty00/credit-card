@@ -34,8 +34,8 @@ mobile View <img src=https://github.com/Tiuty00/credit-card/blob/main/mobile-scr
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/Tiuty00/credit-card)
+- Live Site URL: (https://tiuty00.github.io/credit-card/)
 
 
 ### Built with
